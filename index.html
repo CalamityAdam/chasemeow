@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- 
+  Stay awhile and listen!
+ -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😸</text></svg>" />
+  <title>Chase Meow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+  <style>
+    html {
+      margin: 0;
+      padding: 0;
+      background-color: darkslategray;
+      font-family: 'Nabla', cursive;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .meow {
+      font-size: 3rem;
+      color: rgb(255, 215, 40);
+      cursor: default;
+    }
+
+    @media (max-width: 600px) {
+      .meow {
+        font-size: 2rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="meow">meow</h1>
+  </div>
+
+  <script>
+    const meow = document.querySelector('.meow');
+    meow.addEventListener('mouseover', (e) => {
+      e.currentTarget.style.transform = `translate3d(${Math.round(Math.random()) ? '-' : ''}${Math.floor(Math.random() * 201)}px, ${Math.round(Math.random()) ? '-' : ''}${Math.floor(Math.random() * 201)}px, ${Math.round(Math.random()) ? '-' : ''}${Math.floor(Math.random() * 201)}px)`;
+      meow.style.transition = '.2s cubic-bezier(0.3, 0, 0.5, 1)';
+      meow.style.position = 'relative';
+      meow.style.transitionProperty = 'transform';
+    })
+
+    console.log('%c Made with ♥️ by Adam Sisk ', 'color: darkslategray; background: palevioletred; font-size: 30px');
+    console.log('%c https://github.com/calamityadam/ ', 'color: darkslategray; background: palevioletred; font-size: 20px');
+  </script>
+</body>
+
+</html>
